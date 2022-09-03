@@ -17,18 +17,18 @@ badge = cv2.imread(os.path.join(directory_of_python_script,file_name), cv2.IMREA
 # Set threshold for matching
 threshold = 0.8
 
-# Location of the buttons to press
-Play ='550 2000'
-Race = '540 2230'
-middle = '550 1000'
-home = '530 2270'
-Box = '150 1700'
-Start = '550 1650'
-timee = '550 700'
-date = '570 1240'
-day = '540 1830'
-done = '790 2090'
-res = '950 450'
+# Location of the buttons to press x y on the phone coordinates
+Play ='550 2000' # Location of the play button of the game
+Race = '540 2230' # Location of the race buttom of the game
+middle = '550 1000' # Middle of the screen
+home = '530 2270' # Location of the crown button of the game
+Box = '150 1700' # Location of the birst box of the game
+Start = '550 1650' # Location of the Start button of the box of the game
+timee = '550 700' # Location of the Set date option on the Date and time settings
+date = '570 1240' # Location of the month and year option after selecting Set date
+day = '540 1830' # Location of the option to choose day of tomorrow after selecting the option with month and year
+done = '790 2090' # Location of the done button after changing day
+res = '950 450' # Location of the check box of the Automatic date and time option
 
 # Connect phone to pc to send commands
 def connect():
