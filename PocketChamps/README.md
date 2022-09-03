@@ -12,7 +12,7 @@ one day forward to instantly open the box, beacuse the clock of the game is in s
 
 For this to work perfectly, you must have the furst box slot free, be on the home screen where the play button is.
 As image below
-![1](https://github.com/avlis-MMO/Games-automation/blob/main/PocketChamps/img/1.jpeg?=250x250)
+![1](https://github.com/avlis-MMO/Games-automation/blob/main/PocketChamps/img/1.jpeg?=50x50)
 
 The other thing is to have only to apps running on the background of your phone, the pocket champ app and the settings app opened in the date and time section, and the 
 Automatic date and time box should be unselected. As seen in the images below.
