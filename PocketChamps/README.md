@@ -16,4 +16,8 @@ As image below.
 <img src="https://github.com/avlis-MMO/Games-automation/blob/main/PocketChamps/img/1.jpeg" width="200">
 The other thing is to have only to apps running on the background of your phone, the pocket champ app and the settings app opened in the date and time section, and the 
 Automatic date and time box should be unselected. As seen in the images below.
+
+<img src="https://github.com/avlis-MMO/Games-automation/blob/main/PocketChamps/img/2.jpeg" width="200">
+<img src="https://github.com/avlis-MMO/Games-automation/blob/main/PocketChamps/img/3.jpeg" width="200">
+
 With this done just return to the game and start the code.
