@@ -1,7 +1,8 @@
 # Explanation
 
 This script will automate the game pocket champs on android phones, for these to work you must have all the require libraries and be able to connect ur phone to the pc
-and copy its screen. And this script was made for the Samsung S20, so may not work for other androids
+and copy its screen. And this script was made for the Samsung S20, so may not work for other androids. If the reason is because the buttons selected arent in the same 
+spots you can change this to be according to your phone coordinates
 
 ## What will it do?
 
