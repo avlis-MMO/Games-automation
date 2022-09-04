@@ -2,12 +2,12 @@
 
 This script will automate the game pocket champs on android phones, for these to work you must have all the require libraries and be able to connect ur phone to the pc
 and copy its screen. And this script was made for the Samsung S20, so may not work for other androids. If the reason is because the buttons selected arent in the same 
-spots you can change this to be according to your phone coordinates
+spots you can change this to be according to your phone coordinates.
 
 ## What will it do?
 
-The script will start runs for you, select the best gadget avaiable for you, get the rewards, start opening the box, and most important will change the time on your phone
-one day forward to instantly open the box, beacuse the clock of the game is in sync with the clock of the phone.
+The script will start runs for you, select the best gadget avaiable for you, get the rewards, start opening the box, and most important will change the time on your phone one day forward to instantly open the box, beacuse the clock of the game is in sync with the clock of the phone.
+But after a few runs the game will start to lag a bit and should stop until its back to normal.
 
 ## What to do before starting?
 
