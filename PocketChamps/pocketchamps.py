@@ -65,8 +65,8 @@ if __name__ == '__main__':
 
         while "Screen capturing":
 
-            #Part of the screen to capture
-            window_handle = FindWindow(None, "SM-G781B")
+            #Part of the screen to capture, change window name here *******
+            window_handle = FindWindow(None, "********")
             window_rect   = GetWindowRect(window_handle)
             monitor1 = {"top": window_rect[1], "left": window_rect[0], "width": (window_rect[2] - window_rect[0]), "height": (window_rect[3] - window_rect[1])}
             game = np.array(sct.grab(monitor1))
@@ -120,7 +120,7 @@ if __name__ == '__main__':
             # Go to the app menu to select the options to change the time
             for i in range(2):
                 device.shell('input keyevent 187')
-                time.sleep(1)
+                time.sleep(1.5)
 
             # Select tho change the time
             device.shell(f'input tap {timee}')
@@ -141,17 +141,19 @@ if __name__ == '__main__':
             # Go back to game
             for i in range(2):
                 device.shell('input keyevent 187')
-                time.sleep(1)
+                time.sleep(1.5)
 
             # Click box to open
             device.shell(f'input tap {Box}')
             time.sleep(3)
 
             # Get all the rewards
+            now = time.time()
+            future = now + 15
             while 1:
                 device.shell(f'input tap {middle}')
                 time.sleep(1)
-                if check_X():
+                if check_X() or time.time() == future:
                     break
 
             # Wait for the level up and go back
@@ -162,17 +164,16 @@ if __name__ == '__main__':
             # Go to options tab again
             for i in range(2):
                 device.shell('input keyevent 187')
-                time.sleep(1)
+                time.sleep(1.5)
 
             # Change date back to correct day
             for i in range(2):
                 device.shell(f'input tap {res}')
-                time.sleep(0.5)
+                time.sleep(1)
 
             # Go to game again
-            device.shell('input keyevent 187')
-            time.sleep(1)
-            device.shell('input keyevent 187')
-            time.sleep(1)
+            for i in range(2):
+                device.shell('input keyevent 187')
+                time.sleep(1.5)
 
             
