@@ -38,13 +38,13 @@ helmets = {'3D Glasses':cv2.imread(os.path.join(directory_of_python_script,'helm
 
 portal = cv2.imread(os.path.join(directory_of_python_script,'other\portal_2.png'), cv2.IMREAD_UNCHANGED)
 portal_h, portal_w = portal.shape[:2]
-vic = cv2.imread(os.path.join(directory_of_python_script,'other\vic.png'), cv2.IMREAD_UNCHANGED)
+vic = cv2.imread(os.path.join(directory_of_python_script,'other\\vic.png'), cv2.IMREAD_UNCHANGED)
 vic_h, vic_w = vic.shape[:2]
 end = cv2.imread(os.path.join(directory_of_python_script,'other\end.png'), cv2.IMREAD_UNCHANGED)
 end_h, end_w = end.shape[:2]
-buy_gold = cv2.imread(os.path.join(directory_of_python_script,'other\buy_gold.png'), cv2.IMREAD_UNCHANGED)
+buy_gold = cv2.imread(os.path.join(directory_of_python_script,'other\\buy_gold.png'), cv2.IMREAD_UNCHANGED)
 bg_h, bg_w = buy_gold.shape[:2]
-buy_cd = cv2.imread(os.path.join(directory_of_python_script,'other\buy_cd.png'), cv2.IMREAD_UNCHANGED)
+buy_cd = cv2.imread(os.path.join(directory_of_python_script,'other\\buy_cd.png'), cv2.IMREAD_UNCHANGED)
 bcd_h, bcd_w = buy_cd.shape[:2]
 click = cv2.imread(os.path.join(directory_of_python_script,'other\square.png'), cv2.IMREAD_UNCHANGED)
 click_h, click_w = click.shape[:2]
@@ -97,11 +97,17 @@ def CheckCircle():
 
             # Get only the rgb
             game = np.array(sct.grab(monitor1))
+            game_bw = game[:,:,:3]
             game_r = game[:,:,:3]
 
+            # Get just the white text
+            maskw = cv2.inRange(game_bw, np.array([190, 190, 190]), np.array([255, 255, 255]))
+            detected_output = cv2.bitwise_and(game_bw, game_bw, mask =  maskw) 
+            
             # Check if its the circle pressing system
-            text = pytesseract.image_to_string(cv2.cvtColor(game, cv2.COLOR_BGR2GRAY))
+            text = pytesseract.image_to_string(detected_output)
             test = 'Tap'
+            print(text)
             if test not in text:
                 break
             
@@ -199,7 +205,7 @@ if __name__ == '__main__':
             window_rect   = GetWindowRect(window_handle)
             monitor1 = {"top": window_rect[1], "left": window_rect[0], "width": (window_rect[2] - window_rect[0]), "height": (window_rect[3] - window_rect[1])}
         
-            attack()
+            #attack()
             time.sleep(1)
             while 1:
                 game = np.array(sct.grab(monitor1))
