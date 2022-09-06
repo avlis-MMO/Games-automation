@@ -107,7 +107,6 @@ def CheckCircle():
             # Check if its the circle pressing system
             text = pytesseract.image_to_string(detected_output)
             test = 'Tap'
-            print(text)
             if test not in text:
                 break
             
@@ -205,7 +204,7 @@ if __name__ == '__main__':
             window_rect   = GetWindowRect(window_handle)
             monitor1 = {"top": window_rect[1], "left": window_rect[0], "width": (window_rect[2] - window_rect[0]), "height": (window_rect[3] - window_rect[1])}
         
-            #attack()
+            attack()
             time.sleep(1)
             while 1:
                 game = np.array(sct.grab(monitor1))
